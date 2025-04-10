@@ -17,7 +17,8 @@ const Prediction = () => {
     const [majorPrediction, setMajorPrediction] = useState(null);
     const [summary, setSummary] = useState(null);
     const [ipcSection, setIpcSection] = useState(null);
-    const uploadUrl = "http://localhost:8080/api/v1/upload"; // Replace with your actual API URL
+
+    const uploadUrl = import.meta.env.VITE_PREDICTION_FILE_UPLOAD_URL
 
     const handleFileChange = (event) => {
         setFile(event.target.files[0]);
