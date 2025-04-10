@@ -1,0 +1,29 @@
+.scrolling-text {
+    display: flex;
+    gap: 1200px;
+    /* Space between messages */
+    overflow: hidden;
+    white-space: nowrap;
+    width: 100%;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #2c3e50;
+    background: #f8f9fa;
+    padding: 10px 0;
+    position: relative;
+}
+
+.scrolling-text span {
+    display: inline-block;
+    animation: marquee 15s linear infinite;
+}
+
+@keyframes marquee {
+    from {
+        transform: translateX(100%);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
