@@ -35,7 +35,7 @@ const Header = () => {
                 {/* Left Section - Logo, Title, Emblem */}
                 <div className="d-flex align-items-center gap-3">
                     <img src="judiciary_logo-removebg-preview.png" className={styles.jlogo} alt="Judiciary Logo" />
-                    <h1 className="fw-bold mb-0">NyayMitra</h1>
+                    <h1 className="fw-bold mb-0">NyayaMitra</h1>
                     <img src="emblem.jpg" className={styles.emblem} alt="Indian Emblem" />
                 </div>
 
