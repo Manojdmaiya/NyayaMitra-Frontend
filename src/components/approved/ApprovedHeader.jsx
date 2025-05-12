@@ -71,9 +71,9 @@ const ApprovedHeader = () => {
                 <div className="container d-flex justify-content-between align-items-center">
                     {/* Left - Logo & Title */}
                     <div className="d-flex align-items-center gap-3">
-                        <img src="NyayaMitralogobgr.png" className={styles.emblem} alt="Indian Emblem" />
+                        <img src="../NyayaMitralogobgr.png" className={styles.emblem} alt="Indian Emblem" />
                         <h1 className="fw-bold mb-0">NyayaMitra</h1>
-                        <img src="judiciary_logo-removebg-preview.png" className={styles.jlogo} alt="Judiciary Logo" />
+                        <img src="../judiciary_logo-removebg-preview.png" className={styles.jlogo} alt="Judiciary Logo" />
                     </div>
 
                     {/* Mobile Toggle */}
