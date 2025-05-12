@@ -1,0 +1,82 @@
+.NM2 {
+    max-width: 45%;
+    height: auto;
+    padding: 10px;
+    margin-left: 50px;
+}
+
+.home-container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    text-align: left;
+    color: white;
+    padding: 20px;
+    background: linear-gradient(45deg, #010107, #441c06, #180303, #2e0204);
+    background-size: 400% 400%;
+    animation: darkGradientAnimation 8s ease infinite;
+    justify-content: flex-start;
+
+}
+
+.text-container {
+    max-width: 45%;
+}
+
+.tle {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #FFD700;
+    padding-bottom: 50px;
+    margin-top: -150px;
+    margin-left: 80px;
+    text-shadow: 1px 1px 4px rgba(255, 215, 0, 0.8);
+}
+
+.typing {
+    font-size: 1.3rem;
+    font-weight: 500;
+    color: white;
+    white-space: pre-wrap;
+    display: inline;
+}
+
+.cursor {
+    font-weight: bold;
+    font-size: 1.2rem;
+    color: white;
+    animation: blinkCursor 0.8s infinite;
+}
+
+
+.predict {
+    position: absolute;
+    margin-top: 100px;
+    transform: translateX(300%);
+}
+
+
+@keyframes blinkCursor {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+
+@keyframes darkGradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
