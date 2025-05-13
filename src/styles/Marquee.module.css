@@ -1,29 +1,32 @@
-.scrolling-text {
-    display: flex;
-    gap: 1200px;
-    /* Space between messages */
+.marquee {
+    width: 100%;
     overflow: hidden;
     white-space: nowrap;
-    width: 100%;
+    background: #f8f9fa;
+    color: #2c3e50;
     font-size: 1.2rem;
     font-weight: bold;
-    color: #2c3e50;
-    background: #f8f9fa;
     padding: 10px 0;
     position: relative;
 }
 
-.scrolling-text span {
+.marqueeContent {
     display: inline-block;
-    animation: marquee 15s linear infinite;
+    white-space: nowrap;
+    animation: scroll 25s linear infinite;
 }
 
-@keyframes marquee {
-    from {
-        transform: translateX(100%);
-    }
+.marqueeItem {
+    display: inline-block;
+    margin-right: 900px;
+    position: relative;
+}
 
-    to {
-        transform: translateX(-100%);
+@keyframes scroll {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-50%);
     }
 }

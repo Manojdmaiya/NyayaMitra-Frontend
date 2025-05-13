@@ -1,14 +1,20 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "../styles/Auth.module.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function SignIn() {
   const [form, setForm] = useState({ username: "", email: "", password: "" });
   const [message, setMessage] = useState("");
+  const [showPassword, setShowPassword] = useState(false);
   const navigate = useNavigate();
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
@@ -84,6 +90,13 @@ export default function SignIn() {
               className={styles.inputField2}
               required
             />
+            <button
+                type="button"
+                className={styles.passwordToggle}
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
+              </button>
 
             <div className={styles.checkboxRow}>
               <input type="checkbox" />
