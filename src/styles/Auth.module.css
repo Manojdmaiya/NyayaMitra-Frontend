@@ -224,3 +224,32 @@ a {
   width: 20px;
   height: 20px;
 }
+
+.passwordContainer {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.passwordToggle {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  color: #999;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.passwordToggle:hover {
+  color: #e0e0e0;
+}
+
+.passwordInput::placeholder {
+  color: #999;
+}

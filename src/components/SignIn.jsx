@@ -81,6 +81,7 @@ export default function SignIn() {
               className={styles.inputField2}
               required
             />
+            <div className={styles.passwordContainer}>
             <input
               type="password"
               name="password"
@@ -97,6 +98,7 @@ export default function SignIn() {
               >
                 {showPassword ? <FaEyeSlash /> : <FaEye />}
               </button>
+            </div>
 
             <div className={styles.checkboxRow}>
               <input type="checkbox" />
