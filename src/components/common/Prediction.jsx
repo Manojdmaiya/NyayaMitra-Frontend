@@ -27,7 +27,7 @@ const Prediction = ({ baseurl = "" }) => {
     const [majorPrediction, setMajorPrediction] = useState(null);
     const [summary, setSummary] = useState(null);
     const [ipcSection, setIpcSection] = useState(null);
-    const uploadUrl = `http://localhost:8080/api/${baseurl}/v1/upload`;
+    const uploadUrl = `https://nyayamitra-backend-dev.onrender.com/api/${baseurl}/v1/upload`;
 
     const handleFileChange = (event) => {
         setFile(event.target.files[0]);

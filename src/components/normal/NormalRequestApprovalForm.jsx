@@ -38,7 +38,7 @@ const NormalRequestApprovalForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8080/api/normal/v1/request-approval", {
+      const response = await fetch("https://nyayamitra-backend-dev.onrender.com/api/normal/v1/request-approval", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -65,7 +65,7 @@ const NormalRequestApprovalForm = () => {
   useEffect(() => {
     const verify = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/normal/v1/request-approval", {
+        const response = await fetch("https://nyayamitra-backend-dev.onrender.com/api/normal/v1/request-approval", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",

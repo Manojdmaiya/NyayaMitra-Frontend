@@ -39,7 +39,7 @@ const ApprovedRequestApprovalForm = () => {
     e.preventDefault();
 
     try {
-      const response = await fetch("http://localhost:8080/api/approved/v1/request-approval", {
+      const response = await fetch("https://nyayamitra-backend-dev.onrender.com/api/approved/v1/request-approval", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -66,7 +66,7 @@ const ApprovedRequestApprovalForm = () => {
   useEffect(() => {
     const verify = async () => {
       try {
-        const response = await fetch("http://localhost:8080/api/approved/v1/request-approval", {
+        const response = await fetch("https://nyayamitra-backend-dev.onrender.com/api/approved/v1/request-approval", {
           method: "GET",
           headers: {
             "Content-Type": "application/json",
