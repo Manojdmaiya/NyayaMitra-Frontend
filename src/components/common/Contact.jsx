@@ -1,5 +1,5 @@
 import React, { useRef, useState } from 'react';
-import emailjs from 'emailjs-com';
+import emailjs from '@emailjs/browser';
 import '../../styles/Contact.css';
 
 const Contact = () => {
@@ -16,13 +16,13 @@ const Contact = () => {
       form.current,
       'GBJ0r1HfPvp6hqAMl'
     )
-    .then(() => {
-      setStatus('Email sent successfully!');
-      form.current.reset();
-    })
-    .catch(() => {
-      setStatus('Failed to send email. Please try again.');
-    });
+      .then(() => {
+        setStatus('Email sent successfully!');
+        form.current.reset();
+      })
+      .catch(() => {
+        setStatus('Failed to send email. Please try again.');
+      });
   };
 
   return (
