@@ -33,7 +33,7 @@ const AdminApprovalRequests = () => {
   useEffect(() => {
     const fetchApprovals = async () => {
       try {
-        const response = await axios.get('https://nyayamitra-backend-dev.onrender.com/api/admin/v1/get-approval-list', {
+        const response = await axios.get('http://localhost:8080/api/admin/v1/get-approval-list', {
           method: "GET",
           headers: {
             "Authorization": `Bearer ${authToken}`,
@@ -69,7 +69,7 @@ const AdminApprovalRequests = () => {
     try {
       const comment = action === 'APPROVED' ? comments[id] || '' : '';
       await axios.post(
-        'https://nyayamitra-backend-dev.onrender.com/api/admin/v1/approve',
+        'http://localhost:8080/api/admin/v1/approve',
         {
           id,
           approverComments: comment,
@@ -100,7 +100,7 @@ const AdminApprovalRequests = () => {
 
     try {
       await axios.post(
-        'https://nyayamitra-backend-dev.onrender.com/api/admin/v1/approve',
+        'http://localhost:8080/api/admin/v1/approve',
         {
           id,
           approverComments: updatedComment,

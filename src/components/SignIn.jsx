@@ -19,7 +19,7 @@ export default function SignIn() {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const res = await fetch("https://nyayamitra-backend-dev.onrender.com/api/public/login", {
+      const res = await fetch("http://localhost:8080/api/public/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -40,11 +40,10 @@ export default function SignIn() {
         setMessage("Logged in successfully!");
 
       } else {
-        setMessage(`Error: ${data.message || "Login failed"}`);
+        setMessage(`Error: ${data.error || "Login failed"}`);
       }
     } catch (err) {
-      console.error(err);
-      setMessage("Error: Unable to connect to server");
+      setMessage("An unexpected error occurred");
     }
   };
 

@@ -13,7 +13,7 @@
 .marqueeContent {
     display: inline-block;
     white-space: nowrap;
-    animation: scroll 25s linear infinite;
+    animation: scroll 45s linear infinite;
 }
 
 .marqueeItem {
@@ -26,6 +26,7 @@
     0% {
         transform: translateX(0);
     }
+
     100% {
         transform: translateX(-50%);
     }

@@ -25,8 +25,10 @@ export default function SignUp() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setMessage("");
+
     try {
-      const res = await fetch("https://nyayamitra-backend-dev.onrender.com/api/public/register", {
+      const res = await fetch("http://localhost:8080/api/public/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
@@ -47,11 +49,10 @@ export default function SignUp() {
         setMessage("Account created!");
 
       } else {
-        setMessage(`Error: ${data.message || "Registration failed"}`);
+        setMessage(`Error: ${data.error || "Login failed"}`);
       }
     } catch (err) {
-      console.error(err);
-      setMessage("Error: Unable to connect to server");
+      setMessage("An unexpected error occurred");
     }
   };
 

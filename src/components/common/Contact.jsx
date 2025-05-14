@@ -38,10 +38,6 @@ const Contact = () => {
             <input id="name" name="name" type="text" placeholder="Your Name" required />
           </div>
           <div className="form-group">
-            <label htmlFor="email">Email</label>
-            <input id="email" name="email" type="email" placeholder="your@email.com" required />
-          </div>
-          <div className="form-group">
             <label htmlFor="subject">Subject</label>
             <input id="subject" name="subject" type="text" placeholder="Subject" />
           </div>
