@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import styles from "../styles/Auth.module.css";
+import { FaEye, FaEyeSlash } from "react-icons/fa";
 
 export default function SignUp() {
   const [form, setForm] = useState({
@@ -12,6 +13,12 @@ export default function SignUp() {
   });
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
+  const [showPassword, setShowPassword] = useState(false);
+
+  const togglePasswordVisibility = () => {
+    setShowPassword(!showPassword);
+  };
+
 
   const handleChange = (e) =>
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -102,15 +109,24 @@ export default function SignUp() {
               className={styles.inputField2}
               required
             />
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter your password"
-              value={form.password}
-              onChange={handleChange}
-              className={styles.inputField2}
-              required
-            />
+            <div className={styles.passwordContainer}>
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="Enter your password"
+                value={form.password}
+                onChange={handleChange}
+                className={styles.inputField2}
+                required
+              />
+              <button
+                type="button"
+                className={styles.passwordToggle}
+                onClick={togglePasswordVisibility}
+              >
+                {showPassword ? <FaEyeSlash /> : <FaEye />}
+              </button>
+            </div>
 
             <div className={styles.checkboxRow}>
               <input type="checkbox" required />

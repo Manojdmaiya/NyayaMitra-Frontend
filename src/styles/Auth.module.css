@@ -241,6 +241,7 @@ a {
   color: #999;
   cursor: pointer;
   padding: 0.25rem;
+  padding-bottom: 20px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -252,4 +253,8 @@ a {
 
 .passwordInput::placeholder {
   color: #999;
+}
+
+input::-ms-reveal {
+  display: none;
 }

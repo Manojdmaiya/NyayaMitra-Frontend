@@ -82,16 +82,16 @@ export default function SignIn() {
               required
             />
             <div className={styles.passwordContainer}>
-            <input
-              type="password"
-              name="password"
-              placeholder="Enter your password"
-              value={form.password}
-              onChange={handleChange}
-              className={styles.inputField2}
-              required
-            />
-            <button
+              <input
+                type={showPassword ? "text" : "password"}
+                name="password"
+                placeholder="Enter your password"
+                value={form.password}
+                onChange={handleChange}
+                className={styles.inputField2}
+                required
+              />
+              <button
                 type="button"
                 className={styles.passwordToggle}
                 onClick={togglePasswordVisibility}
