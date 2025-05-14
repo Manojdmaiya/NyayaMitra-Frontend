@@ -28,7 +28,7 @@ export default function SignUp() {
     setMessage("");
 
     try {
-      const res = await fetch("http://localhost:8080/api/public/register", {
+      const res = await fetch("https://nyayamitra-backend-dev.onrender.com/api/public/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(form),
