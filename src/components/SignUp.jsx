@@ -9,7 +9,7 @@ export default function SignUp() {
     lastName: "",
     username: "",
     email: "",
-    password: "",
+    password: ""
   });
   const [message, setMessage] = useState("");
   const navigate = useNavigate();
