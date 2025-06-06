@@ -103,7 +103,7 @@ const Prediction = ({ baseurl = "" }) => {
             let y = 50;
 
             try {
-                const img = await loadImage("/public/NyayaMitralogobgr.png"); // Your own logo
+                const img = await loadImage("../../../public/judiciary_logo-removebg-preview.png"); // Your own logo
                 doc.addImage(img, "PNG", 20, 5, 35, 35);
             } catch (err) {
                 console.warn("Logo image failed to load. Continuing without it.");
@@ -179,7 +179,7 @@ const Prediction = ({ baseurl = "" }) => {
 
                 // Hammer symbol (small icon beside the verdict)
                 try {
-                    const hammerIcon = await loadImage("/public/hammer.png"); // adjust path
+                    const hammerIcon = await loadImage("../../../public/hammer.png"); // adjust path
                     doc.addImage(hammerIcon, "PNG", 10, y - 4, 25, 15); // small hammer left to verdict
                 } catch (imgErr) {
                     console.warn("Hammer icon not loaded:", imgErr);
@@ -230,7 +230,7 @@ const Prediction = ({ baseurl = "" }) => {
             let y = 50;
 
             try {
-                const img = await loadImage("/public/NyayaMitralogobgr.png"); // Your own logo
+                const img = await loadImage("../../../public/judiciary_logo-removebg-preview.png"); // Your own logo
                 doc.addImage(img, "PNG", 20, 5, 35, 35);
             } catch (err) {
                 console.warn("Logo image failed to load. Continuing without it.");
@@ -305,7 +305,7 @@ const Prediction = ({ baseurl = "" }) => {
 
                 // Hammer symbol (small icon beside the verdict)
                 try {
-                    const hammerIcon = await loadImage("/public/hammer.png"); // adjust path
+                    const hammerIcon = await loadImage("../../../public/hammer.png"); // adjust path
                     doc.addImage(hammerIcon, "PNG", 10, y - 4, 25, 15); // small hammer left to verdict
                 } catch (imgErr) {
                     console.warn("Hammer icon not loaded:", imgErr);
